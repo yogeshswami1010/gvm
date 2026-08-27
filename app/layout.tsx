@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Sell Your Painting Quickly & Safely | PieterKoopt®',
-  description: 'A personal, transparent way to sell your painting with an assessment within 48 hours.',
+  title: 'Gandhi Vidya Mandir | Education with Social Commitment',
+  description: 'Gandhi Vidya Mandir advances education, character, rural welfare and service from its campus in Sardarshahr, Rajasthan.',
 };
 
 export default function RootLayout({
