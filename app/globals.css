@@ -65,3 +65,6 @@ body.is-loading{overflow:hidden}.site-intro{position:fixed;inset:0;z-index:100;b
 .process .step.is-visible,.process .step:hover,.process .step.is-visible:hover{transform:translate3d(0,110vh,0) rotate(0deg) scale(1)}
 @media(max-width:900px){.process .steps{height:350vh}.process .step,.process .step:nth-child(2),.process .step:nth-child(3){top:10vh;min-height:72vh}}
 @media(max-width:560px){.process .steps{height:330vh}.process .step,.process .step:nth-child(2),.process .step:nth-child(3){top:9vh;min-height:68vh}}
+
+/* Sticky stages cannot be clipped by a non-scrolling ancestor. */
+.process{overflow:visible}
