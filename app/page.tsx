@@ -1,9 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 export default function Home() {
- const [intro,setIntro]=useState(true);
  useEffect(()=>{
-  document.body.classList.add('is-loading');
   const nodes=document.querySelectorAll('[data-reveal]');
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('is-visible')}),{threshold:.14});
   nodes.forEach(node=>observer.observe(node));
@@ -37,7 +35,6 @@ export default function Home() {
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
   return()=>{observer.disconnect();removeEventListener('scroll',onScroll)};
  },[]);
- const enter=()=>{setIntro(false);document.body.classList.remove('is-loading')};
  return <main><section className="hero" id="home">
   <video className="hero-media" autoPlay muted loop playsInline poster="https://cdn.prod.website-files.com/67890d3b1a9365a1173c954e/68414b36c5bc5cd43e314e77_Videoframe.webp"><source src="https://player.vimeo.com/progressive_redirect/playback/1093047624/rendition/720p/file.mp4?loc=external&log_user=0&signature=0cd224625af390868dad10388d9ee1554824439a5e54f93b59aa7f2a9eae41f5" type="video/mp4"/></video><div className="hero-shade"/>
   <header className="nav reference-nav"><div className="nav-left"><a className="brand nav-cell logo-cell" href="#home">PIETERKOOPT<sup>®</sup></a><button className="nav-cell sound-cell" aria-label="Sound settings"><span/><span/><span/><span/><span/></button><a className="nav-cell lang-cell" href="#home">EN</a><a className="nav-cell whatsapp-cell" href="https://wa.me/31653292939" aria-label="WhatsApp">◔</a></div><nav><a href="#how">HOW IT WORKS</a><a href="#about">ABOUT US</a><a href="#stories">STORIES</a><a href="#contact">CITY TOUR</a><a href="#contact">CONTACT</a></nav><a className="request-offer" href="#quote"><span>REQUEST OFFER</span><b>›</b></a></header>
