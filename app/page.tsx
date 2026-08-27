@@ -9,12 +9,22 @@ export default function Home() {
   nodes.forEach(node=>observer.observe(node));
   const onScroll=()=>{
    document.querySelector('.nav')?.classList.toggle('is-small',window.scrollY>80);
-   const process=document.querySelector('.process') as HTMLElement|null;
-   if(process){
-    const rect=process.getBoundingClientRect();
-    const releaseDistance=Math.max(innerHeight*.72,520);
-    const release=Math.max(0,Math.min(1,(releaseDistance-rect.bottom)/releaseDistance));
-    process.style.setProperty('--stack-release',String(release));
+   const steps=document.querySelector('.process .steps') as HTMLElement|null;
+   const processCards=Array.from(document.querySelectorAll('.process .step')) as HTMLElement[];
+   if(steps&&processCards.length){
+    const rect=steps.getBoundingClientRect();
+    const travel=Math.max(1,steps.offsetHeight-innerHeight);
+    const progress=Math.max(0,Math.min(1,-rect.top/travel));
+    const starts=[0,.28,.56],ends=[.14,.42,.70];
+    const release=Math.max(0,Math.min(1,(progress-.82)/.16));
+    processCards.forEach((card,index)=>{
+     const raw=Math.max(0,Math.min(1,(progress-starts[index])/(ends[index]-starts[index])));
+     const eased=1-Math.pow(1-raw,3);
+     const enterY=(1-eased)*110;
+     const releaseY=release*115;
+     card.style.opacity=String(raw);
+     card.style.transform='translate3d(0,calc('+enterY+'vh - '+releaseY+'vh),0) rotate(0deg) scale(1)';
+    });
    }
    const deck=document.querySelector('.feature-deck') as HTMLElement|null;
    const cards=Array.from(document.querySelectorAll('.deck-card')) as HTMLElement[];
@@ -35,7 +45,7 @@ export default function Home() {
   <div className="scroll-cue mono">SCROLL TO DISCOVER <span>↓</span></div>
  </section><section data-reveal className="intro section shell" id="about"><div className="eyebrow mono">SELLING YOUR PAINTING?</div><div className="intro-grid"><h2>Selling your<br/>painting?<br/><em>It starts here</em></h2><div><p>Your artwork takes centre stage. We treat each piece with respect and personal attention, keeping the process simple and its story alive.</p><a className="text-link mono" href="#contact">READ MORE ABOUT PIETERKOOPT <span>↗</span></a></div></div></section>
 <section className="feature-deck"><div className="shell deck-grid"><div className="deck-copy"><span className="mono">WHY PIETERKOOPT®</span><h2>Three reasons<br/><em>to sell with us</em></h2><p>Scroll to reveal each advantage. Every card arrives, settles, and remains in the stack.</p></div><div className="deck-stage"><article className="deck-card card-one"><span className="mono">01</span><h3>NO HIDDEN FEES</h3><p>You receive 100% of the offer.</p></article><article className="deck-card card-two"><span className="mono">02</span><h3>EXPERT ASSESSMENT AT HOME</h3><p>We come to you and arrange everything.</p></article><article className="deck-card card-three"><span className="mono">03</span><h3>FAST AND PERSONAL PROCESS</h3><p>A response to your submission within 48 hours.</p></article></div><div className="deck-progress"><i/><i/><i/></div></div></section>
-<section data-reveal className="process section" id="how"><div className="shell"><div className="eyebrow mono">HOW IT WORKS</div><h2 className="process-title">Selling paintings<br/><em>without the hassle</em></h2><p className="process-lead">We keep things simple, fast and transparent. Follow the steps and we take care of the rest.</p><div className="steps"><article data-reveal className="step"><div className="step-copy"><span className="mono">01</span><h3>Upload your artwork</h3><p>Take clear photos, tell the story and upload everything easily.</p></div><div className="step-visual">⌁</div></article><article data-reveal className="step sage"><div className="step-copy"><span className="mono">02</span><h3>Review by Pieter</h3><p>We review your submission and respond within 48 hours.</p></div><div className="step-visual">◎</div></article><article data-reveal className="step clay"><div className="step-copy"><span className="mono">03</span><h3>Personal appointment</h3><p>Pieter visits with a specialist and gives you a fair offer.</p></div><div className="step-visual">↗</div></article></div></div></section>
+<section data-reveal className="process section" id="how"><div className="shell"><div className="eyebrow mono">HOW IT WORKS</div><h2 className="process-title">Selling paintings<br/><em>without the hassle</em></h2><p className="process-lead">We keep things simple, fast and transparent. Follow the steps and we take care of the rest.</p><div className="steps"><div className="step-stage"><article className="step"><div className="step-copy"><span className="mono">01</span><h3>Upload your artwork</h3><p>Take clear photos, tell the story and upload everything easily.</p></div><div className="step-visual">⌁</div></article><article data-reveal className="step sage"><div className="step-copy"><span className="mono">02</span><h3>Review by Pieter</h3><p>We review your submission and respond within 48 hours.</p></div><div className="step-visual">◎</div></article><article data-reveal className="step clay"><div className="step-copy"><span className="mono">03</span><h3>Personal appointment</h3><p>Pieter visits with a specialist and gives you a fair offer.</p></div><div className="step-visual">↗</div></article></div></div></div></section>
 <section data-reveal className="story section shell" id="stories"><div className="story-art"><div className="frame"><div className="paint-stroke"/></div></div><div className="story-copy"><div className="eyebrow mono">STORIES THAT LIVE ON</div><h2>Every painting<br/>has a <em>story</em></h2><p>Art is more than an object. Every painting holds a moment, a memory, an emotion. Stories like these deserve to be shared.</p><a className="pill" href="#stories">See all stories <span>↗</span></a></div></section>
 <section data-reveal className="closing section" id="offer"><div className="shell closing-inner"><div><div className="eyebrow mono">READY WHEN YOU ARE</div><h2>Selling a painting?<br/><em>Pieter arranges it.</em></h2></div><a className="circle-cta" href="#quote">REQUEST<br/>OFFER <b>↗</b></a></div></section>
 <footer data-reveal id="contact"><div className="shell footer-top"><a className="brand footer-brand" href="#home">PIETERKOOPT<sup>®</sup></a><div><span className="mono">NAVIGATION</span><a href="#home">Home</a><a href="#offer">Sell your painting</a><a href="#how">How it works</a><a href="#about">About us</a></div><div><span className="mono">CONTACT</span><a href="mailto:info@pieterkoopt.nl">info@pieterkoopt.nl</a><a href="tel:+31653292939">+31 6 53 29 29 39</a><a href="https://wa.me/31653292939">WhatsApp ↗</a></div><div><span className="mono">ADDRESS</span><p>Johan de Wittstraat 33<br/>3311 KG Dordrecht</p><a href="https://instagram.com/pieterkoopt">Instagram ↗</a></div></div><div className="shell footer-bottom mono">© 2026 PIETERKOOPT® <span>PRIVACY POLICY · TERMS & CONDITIONS</span></div></footer>

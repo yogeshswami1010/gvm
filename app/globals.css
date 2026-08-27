@@ -54,3 +54,14 @@ body.is-loading{overflow:hidden}.site-intro{position:fixed;inset:0;z-index:100;b
 /* Once card 3 has landed, release the completed deck upward as one stack. */
 .process{--stack-release:0}
 .process .step.is-visible,.process .step:hover,.process .step.is-visible:hover{transform:translate3d(0,calc(var(--stack-release) * -88vh),0) rotate(0deg) scale(1)}
+
+/* Deterministic process sequence: 1 stops, 2 covers, 3 covers, then the deck exits together. */
+.process{overflow:hidden;--stack-release:0}
+.process .steps{display:block;position:relative;height:380vh;padding:0;overflow:visible;isolation:auto}
+.process .step-stage{position:sticky;top:0;height:100vh;overflow:hidden}
+.process .step,.process .step:nth-child(2),.process .step:nth-child(3){position:absolute;left:0;right:0;top:11vh;width:100%;min-height:76vh;margin:0;z-index:1;opacity:0;transform:translate3d(0,110vh,0) rotate(0deg) scale(1);transition:none;will-change:transform,opacity}
+.process .step:nth-child(2){z-index:2}
+.process .step:nth-child(3){z-index:3}
+.process .step.is-visible,.process .step:hover,.process .step.is-visible:hover{transform:translate3d(0,110vh,0) rotate(0deg) scale(1)}
+@media(max-width:900px){.process .steps{height:350vh}.process .step,.process .step:nth-child(2),.process .step:nth-child(3){top:10vh;min-height:72vh}}
+@media(max-width:560px){.process .steps{height:330vh}.process .step,.process .step:nth-child(2),.process .step:nth-child(3){top:9vh;min-height:68vh}}
