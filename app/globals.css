@@ -68,3 +68,11 @@ body.is-loading{overflow:hidden}.site-intro{position:fixed;inset:0;z-index:100;b
 
 /* Sticky stages cannot be clipped by a non-scrolling ancestor. */
 .process{overflow:visible}
+
+/* Center the three-card feature deck and keep every card fully in view. */
+.feature-deck .deck-grid{grid-template-columns:1fr;place-items:center;overflow:visible}
+.feature-deck .deck-copy{display:none}
+.feature-deck .deck-stage{width:100%;height:min(76vh,680px);overflow:visible}
+.feature-deck .deck-card{width:min(62vw,560px);max-height:70vh}
+@media(max-width:900px){.feature-deck .deck-card{width:min(78vw,520px);max-height:68vh}.feature-deck .deck-stage{margin-top:0}}
+@media(max-width:560px){.feature-deck .deck-card{width:84vw;max-height:66vh}}
