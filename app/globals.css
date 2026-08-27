@@ -40,3 +40,7 @@ body.is-loading{overflow:hidden}.site-intro{position:fixed;inset:0;z-index:100;b
 /* Align all process cards to one fixed stop point */
 .process .step,.process .step:nth-child(2),.process .step:nth-child(3){--step-x:0px;top:11vh}.process .step:hover,.process .step.is-visible:hover{transform:translate3d(0,0,0) rotate(var(--step-r)) scale(1)}@media(max-width:900px){.process .step,.process .step:nth-child(2),.process .step:nth-child(3){--step-x:0px;top:10vh}}@media(max-width:560px){.process .step,.process .step:nth-child(2),.process .step:nth-child(3){top:9vh}}
 
+
+/* Keep every process card pinned until the full three-card stack is complete */
+.process{overflow:visible}.process .steps{overflow:visible;isolation:isolate}.process .step{backface-visibility:hidden}
+
