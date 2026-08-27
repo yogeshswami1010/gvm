@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 export default function Home() {
  const [intro,setIntro]=useState(true);
  useEffect(()=>{
@@ -38,7 +38,7 @@ export default function Home() {
   return()=>{observer.disconnect();removeEventListener('scroll',onScroll)};
  },[]);
  const enter=()=>{setIntro(false);document.body.classList.remove('is-loading')};
- return <main>{intro&&<div className="site-intro"><div className="intro-signature">Piet</div><div className="intro-choice"><div className="sound-bars"><i/><i/><i/><i/><i/></div><p className="mono">For the best experience, we<br/>recommend turning on your sound.</p><div><button onClick={enter}>WITHOUT AUDIO</button><button className="active" onClick={enter}>WITH AUDIO</button></div></div></div>}<section className="hero" id="home">
+ return <main><section className="hero" id="home">
   <video className="hero-media" autoPlay muted loop playsInline poster="https://cdn.prod.website-files.com/67890d3b1a9365a1173c954e/68414b36c5bc5cd43e314e77_Videoframe.webp"><source src="https://player.vimeo.com/progressive_redirect/playback/1093047624/rendition/720p/file.mp4?loc=external&log_user=0&signature=0cd224625af390868dad10388d9ee1554824439a5e54f93b59aa7f2a9eae41f5" type="video/mp4"/></video><div className="hero-shade"/>
   <header className="nav reference-nav"><div className="nav-left"><a className="brand nav-cell logo-cell" href="#home">PIETERKOOPT<sup>®</sup></a><button className="nav-cell sound-cell" aria-label="Sound settings"><span/><span/><span/><span/><span/></button><a className="nav-cell lang-cell" href="#home">EN</a><a className="nav-cell whatsapp-cell" href="https://wa.me/31653292939" aria-label="WhatsApp">◔</a></div><nav><a href="#how">HOW IT WORKS</a><a href="#about">ABOUT US</a><a href="#stories">STORIES</a><a href="#contact">CITY TOUR</a><a href="#contact">CONTACT</a></nav><a className="request-offer" href="#quote"><span>REQUEST OFFER</span><b>›</b></a></header>
   <div className="hero-copy shell"><div className="art-caption mono"><span>VINCENT VAN GOGH — STARRY NIGHT</span><span>1889</span></div><h1>Time changes everything.<br/><em>Except history.</em></h1><div className="hero-bottom"><p>Want to sell a painting or collection? You can, with the respect it deserves. PieterKoopt® keeps the painting and its story alive.</p><a className="pill light" href="#offer">Sell your painting <span>↗</span></a></div></div>
