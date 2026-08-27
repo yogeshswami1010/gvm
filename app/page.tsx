@@ -9,6 +9,13 @@ export default function Home() {
   nodes.forEach(node=>observer.observe(node));
   const onScroll=()=>{
    document.querySelector('.nav')?.classList.toggle('is-small',window.scrollY>80);
+   const process=document.querySelector('.process') as HTMLElement|null;
+   if(process){
+    const rect=process.getBoundingClientRect();
+    const releaseDistance=Math.max(innerHeight*.72,520);
+    const release=Math.max(0,Math.min(1,(releaseDistance-rect.bottom)/releaseDistance));
+    process.style.setProperty('--stack-release',String(release));
+   }
    const deck=document.querySelector('.feature-deck') as HTMLElement|null;
    const cards=Array.from(document.querySelectorAll('.deck-card')) as HTMLElement[];
    if(!deck||!cards.length)return;
