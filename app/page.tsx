@@ -31,7 +31,7 @@ export default function Home() {
    if(!deck||!cards.length)return;
    const travel=Math.max(1,deck.offsetHeight-innerHeight);
    const progress=Math.max(0,Math.min(1,(scrollY-deck.offsetTop)/travel));
-   const starts=[.02,.34,.66],ends=[.25,.57,.89],finalX=[-42,0,42],finalY=[10,0,10],finalR=[-3.5,0,3.5];
+   const starts=[.02,.34,.66],ends=[.25,.57,.89],finalX=[-82,0,82],finalY=[22,0,28],finalR=[-7,0,6];
    cards.forEach((card,index)=>{const raw=Math.max(0,Math.min(1,(progress-starts[index])/(ends[index]-starts[index])));const eased=1-Math.pow(1-raw,3);const y=140*(1-eased)+finalY[index]*eased;const x=finalX[index]*eased;const rotation=(index===0?-15:index===1?10:-9)*(1-eased)+finalR[index]*eased;card.style.opacity=String(raw);card.style.transform=`translate3d(${x}px,${y}px,0) rotate(${rotation}deg) scale(${.9+.1*eased})`});
   };
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
