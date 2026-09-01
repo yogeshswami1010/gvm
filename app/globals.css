@@ -215,3 +215,18 @@ body.is-loading{overflow:hidden}.site-intro{position:fixed;inset:0;z-index:100;b
   .founder-copy { padding: 54px 24px 32px; }
   .founder-copy h2 { font-size: clamp(45px, 15vw, 72px); }
 }
+
+/* Keep the pinned three-card sequence fully visible at its third-page position. */
+.feature-deck .deck-grid { overflow: visible; grid-template-columns: .8fr 1.2fr; }
+.feature-deck .deck-stage { overflow: visible; padding: 34px 72px 62px 30px; }
+.feature-deck .deck-card { width: min(35vw, 500px); }
+.feature-deck .deck-progress { right: 42px; bottom: 34px; }
+@media (max-width: 900px) {
+  .feature-deck .deck-grid { overflow: hidden; }
+  .feature-deck .deck-stage { padding: 0; }
+  .feature-deck .deck-card { width: min(74vw, 490px); }
+  .feature-deck .deck-progress { right: 18px; bottom: 25px; }
+}
+@media (max-width: 560px) {
+  .feature-deck .deck-card { width: 82vw; }
+}
