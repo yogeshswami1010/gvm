@@ -265,3 +265,12 @@ main > footer {
     margin: 0 8px 8px;
   }
 }
+
+/* Shared inner alignment: section content follows the hero copy edges. */
+.shell {
+  width: calc(100% - 78px);
+  max-width: none;
+}
+@media (max-width: 900px) {
+  .shell { width: calc(100% - 38px); }
+}
