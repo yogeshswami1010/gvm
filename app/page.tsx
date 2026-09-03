@@ -13,8 +13,8 @@ export default function Home() {
     const rect=steps.getBoundingClientRect();
     const travel=Math.max(1,steps.offsetHeight-innerHeight);
     const progress=Math.max(0,Math.min(1,-rect.top/travel));
-    const starts=[.04,.40,.76],ends=[.22,.58,.94];
-    const release=Math.max(0,Math.min(1,(progress-.99)/.01));
+    const starts=[.03,.43,.82],ends=[.20,.60,.97];
+    const release=Math.max(0,Math.min(1,(progress-.995)/.005));
     processCards.forEach((card,index)=>{
      const raw=Math.max(0,Math.min(1,(progress-starts[index])/(ends[index]-starts[index])));
      const eased=1-Math.pow(1-raw,3);

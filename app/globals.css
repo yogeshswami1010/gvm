@@ -362,3 +362,6 @@ main > footer {
 
 /* Longer scroll runway and pauses between activity cards. */
 .process .steps { height: 260vh; }
+
+/* Extra dwell time between each activity card reveal. */
+.process .steps { height: 340vh; }
