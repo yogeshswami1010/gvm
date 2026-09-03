@@ -344,3 +344,8 @@ main > footer {
   .feature-deck .deck-stage { margin-right: 0; }
   .feature-deck .deck-card { top: 50%; }
 }
+
+/* Remove only the empty lead-in and trailing space around the activity card stack. */
+.process.section { padding-top: 0; padding-bottom: 0; }
+.process .steps { padding-bottom: 0; }
+@media (max-width: 900px) { .process .steps { padding-bottom: 0; } }
