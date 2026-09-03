@@ -320,3 +320,15 @@ main > footer {
   .feature-deck .deck-stage { height: 62vh; margin-top: 18vh; }
   .feature-deck .deck-card { top: 50%; }
 }
+
+/* Final desktop spacing for the values card stack. */
+.feature-deck .deck-stage {
+  margin-right: clamp(38px, 4vw, 84px);
+}
+.feature-deck .deck-card {
+  top: 35%;
+}
+@media (max-width: 900px) {
+  .feature-deck .deck-stage { margin-right: 0; }
+  .feature-deck .deck-card { top: 50%; }
+}
