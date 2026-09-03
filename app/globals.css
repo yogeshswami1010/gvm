@@ -332,3 +332,15 @@ main > footer {
   .feature-deck .deck-stage { margin-right: 0; }
   .feature-deck .deck-card { top: 50%; }
 }
+
+/* Centre the card stack within its right-hand column with extra edge breathing room. */
+.feature-deck .deck-stage {
+  margin-right: clamp(82px, 8vw, 158px);
+}
+.feature-deck .deck-card {
+  top: 30%;
+}
+@media (max-width: 900px) {
+  .feature-deck .deck-stage { margin-right: 0; }
+  .feature-deck .deck-card { top: 50%; }
+}
