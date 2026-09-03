@@ -307,3 +307,16 @@ main > footer {
   .feature-deck .deck-copy { padding-top: 0; }
   .feature-deck .deck-stage { align-self: auto; margin-top: 18vh; }
 }
+
+/* Raise the values cards into the title zone while keeping the full stack visible. */
+.feature-deck .deck-stage {
+  height: min(64vh, 620px);
+  margin-top: 0;
+}
+.feature-deck .deck-card {
+  top: 42%;
+}
+@media (max-width: 900px) {
+  .feature-deck .deck-stage { height: 62vh; margin-top: 18vh; }
+  .feature-deck .deck-card { top: 50%; }
+}
