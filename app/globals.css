@@ -349,3 +349,13 @@ main > footer {
 .process.section { padding-top: 0; padding-bottom: 0; }
 .process .steps { padding-bottom: 0; }
 @media (max-width: 900px) { .process .steps { padding-bottom: 0; } }
+
+/* Activity stack timing surface */
+.process .steps {
+  isolation: auto;
+  height: 177vh;
+  padding: 0;
+  display: block;
+  position: relative;
+  overflow: visible;
+}
