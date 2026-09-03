@@ -359,3 +359,6 @@ main > footer {
   position: relative;
   overflow: visible;
 }
+
+/* Longer scroll runway and pauses between activity cards. */
+.process .steps { height: 260vh; }
