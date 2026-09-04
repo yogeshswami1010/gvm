@@ -475,3 +475,19 @@ main > footer {
   display: flex;
   font-size: 25px;
 }
+
+/* Requested footer typography scale. */
+.site-footer .footer-column > span {
+  color: var(--sage);
+  margin-bottom: 14px;
+  font-size: 25px;
+}
+.site-footer .footer-column a {
+  color: #e9e0d4d9;
+  font-size: 22px;
+  line-height: 1.25;
+  transition: color .25s,transform .25s;
+}
+.site-footer .footer-bottom {
+  font-size: 15px;
+}
