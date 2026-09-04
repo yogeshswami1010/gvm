@@ -1,17 +1,5 @@
 import { GvmPageData } from './gvm-content';
-
-const nav = [
-  ['About GVM', '/about'], ['Activities', '/activities'], ['Gau Shala', '/gaushala'],
-  ['Bal Griha', '/bal-griha'], ['Our Team', '/team'], ['Contact', '/contact'],
-];
-
-export function SiteHeader() {
-  return <header className="gvm-nav"><a className="gvm-brand" href="/">GANDHI VIDYA MANDIR</a><nav>{nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</nav><a className="gvm-support" href="/support-us">Support us <b>↗</b></a></header>;
-}
-
-export function SiteFooter() {
-  return <footer className="gvm-footer"><div><strong>GANDHI VIDYA MANDIR</strong><p>Sardarshahr, Churu<br/>Rajasthan 331401, India</p></div><div><span>CONTACT</span><a href="mailto:gvmcentraloffice@gmail.com">gvmcentraloffice@gmail.com</a><a href="tel:+911564220025">01564-220025 / 223642 / 223054</a></div><div><span>EXPLORE</span><a href="/activities">Activities</a><a href="/contact">Contact</a><a href="https://www.gandhividyamandir.org/">Official website ↗</a></div></footer>;
-}
+import { SiteFooter, SiteHeader } from './site-chrome';
 
 export function GvmPage({ page }: { page: GvmPageData }) {
   const isAbout = page.kicker === 'ABOUT GVM';
