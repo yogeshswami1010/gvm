@@ -456,3 +456,22 @@ main > footer {
   font-size: 20px;
   display: block;
 }
+
+/* Requested label and circular CTA sizing. */
+.mono {
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+.circle-cta {
+  aspect-ratio: 1;
+  background: var(--ink);
+  width: 220px;
+  color: var(--cream);
+  border-radius: 50%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 35px;
+  display: flex;
+  font-size: 25px;
+}
