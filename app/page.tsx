@@ -44,7 +44,7 @@ export default function Home() {
   <div className="eyebrow mono">OUR FOUNDER · GVM</div>
   <div className="founder-grid">
     <figure className="founder-media">
-      <img src="https://static.wixstatic.com/media/944c0d_b858a742947a464ca51951a3f921d16d~mv2.jpg/v1/fill/w_1200,h_650,al_c,q_85,usm_0.66_1.00_0.01/gvm2_edited.jpg" alt="Gandhi Vidya Mandir campus" />
+      <img src="/gvm-campus-aerial.jpg" alt="Gandhi Vidya Mandir aerial campus" />
       <figcaption className="mono">GANDHI VIDYA MANDIR · SARDARSHAHR</figcaption>
     </figure>
     <div className="founder-copy">
