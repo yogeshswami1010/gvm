@@ -386,3 +386,73 @@ main > footer {
 .site-footer .footer-bottom { position: relative; display: flex; justify-content: space-between; gap: 24px; padding-top: 20px; padding-bottom: 24px; border-top: 1px solid rgba(233,224,212,.24); color: rgba(233,224,212,.52); font-size: 10px; }
 @media (max-width: 900px) { .site-footer .footer-main { grid-template-columns: 1.35fr 1fr 1fr; }.site-footer .footer-contact { grid-column: 2 / -1; border-left: 0; padding-left: 0; border-top: 1px solid rgba(233,224,212,.22); padding-top: 28px; } }
 @media (max-width: 620px) { .site-footer .footer-topline,.site-footer .footer-bottom { flex-direction: column; gap: 10px; }.site-footer .footer-main { grid-template-columns: 1fr 1fr; gap: 42px 24px; }.site-footer .footer-identity { grid-column: 1 / -1; }.site-footer .footer-contact { grid-column: 1 / -1; }.site-footer .footer-brand { font-size: 88px; }.site-footer .footer-identity p { margin: 26px 0; }.site-footer .footer-support { width: 100%; }.site-footer::before { font-size: 240px; } }
+
+/* Requested typography and caption scale adjustments. */
+.overview-grid article > span {
+  color: inherit;
+  opacity: .65;
+  font-size: 40px;
+}
+.deck-card > span {
+  border-bottom: 1px solid #15191859;
+  padding-bottom: 14px;
+  display: block;
+  font-size: 25px;
+}
+.deck-copy > span {
+  border-top: 1px solid;
+  width: 100%;
+  padding-top: 12px;
+  font-size: 25px;
+}
+.art-caption {
+  text-align: center;
+  color: #e9e0d4d1;
+  border: 0;
+  flex-direction: column;
+  gap: 5px;
+  width: auto;
+  min-width: 200px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  bottom: 27px;
+  left: 42%;
+  font-size: 22px;
+  transform: translate(-50%);
+}
+.founder-copy > span {
+  color: #52684d;
+  border-top: 1px solid #161b1940;
+  width: 100%;
+  margin-bottom: clamp(36px,4.5vw,72px);
+  padding-top: 13px;
+  font-size: 24px;
+}
+.overview-grid p {
+  font-size: 18px;
+  line-height: 1.62;
+}
+.overview-grid a {
+  font: 600 10px var(--font-geist-mono),monospace;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: 15px;
+}
+.mono {
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: 38px;
+}
+.step-copy p {
+  max-width: 420px;
+  font-size: 22px;
+  line-height: 1.55;
+}
+.gallery-heading .mono {
+  border-top: 1px solid #e9e0d46b;
+  padding-top: 13px;
+  font-size: 20px;
+  display: block;
+}
