@@ -37,7 +37,7 @@ export default function Home() {
   return()=>{observer.disconnect();removeEventListener('scroll',onScroll)};
  },[]);
  return <main><section className="hero" id="home">
-  <video className="hero-media" autoPlay muted loop playsInline poster="https://cdn.prod.website-files.com/67890d3b1a9365a1173c954e/68414b36c5bc5cd43e314e77_Videoframe.webp"><source src="https://player.vimeo.com/progressive_redirect/playback/1093047624/rendition/720p/file.mp4?loc=external&log_user=0&signature=0cd224625af390868dad10388d9ee1554824439a5e54f93b59aa7f2a9eae41f5" type="video/mp4"/></video><div className="hero-shade"/>
+  <video className="hero-media" autoPlay muted loop playsInline preload="metadata" poster="https://cdn.prod.website-files.com/67890d3b1a9365a1173c954e/68414b36c5bc5cd43e314e77_Videoframe.webp"><source src="/gvm-drone-hero.mp4" type="video/mp4"/></video><div className="hero-shade"/>
   <SiteHeader />
   <div className="hero-copy shell"><div className="art-caption mono"><span>SWAMI SHRI RAM SHARANJI</span><span>1922–2022</span></div><h1>Gandhi Vidya<br/><em>Mandir (GVM)</em></h1><div className="hero-bottom"><p>Want to sell a painting or collection? You can, with the respect it deserves. PieterKoopt® keeps the painting and its story alive.</p><a className="pill light" href="#offer">Discover GVM <span>↗</span></a></div></div>
   <div className="scroll-cue mono">SCROLL TO DISCOVER <span>↓</span></div>
