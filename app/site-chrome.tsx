@@ -2,7 +2,7 @@ export function SiteHeader() {
   return (
     <header className="nav reference-nav">
       <div className="nav-left">
-        <a className="brand nav-cell logo-cell" href="/"><img className="site-logo site-logo-header" src="/gvm-logo.png" alt="Gandhi Vidya Mandir logo"/><span className="logo-wordmark">Gandhi Vidhya Mandir</span></a>
+        <a className="brand nav-cell logo-cell" href="/"><span className="logo-wordmark">Gandhi Vidhya Mandir</span></a>
       </div>
       <nav>
         <a href="/activities">ACTIVITIES</a>
