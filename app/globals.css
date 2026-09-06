@@ -736,7 +736,7 @@ main > footer {
 
 /* Keep the GVM values card stack fully visible in the upper-right desktop stage. */
 @media (min-width: 901px) {
-  .feature-deck .deck-stage { transform: translate(12px, -54px); }
+  .feature-deck .deck-stage { transform: translate(-58px, -54px); }
   .feature-deck .deck-card { width: min(34vw, 460px); }
 }
 
