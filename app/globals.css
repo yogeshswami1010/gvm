@@ -740,3 +740,20 @@ main > footer {
   .feature-deck .deck-card { width: min(34vw, 460px); }
 }
 
+
+/* Let the founder copy set the row height, with the full portrait filling the matching column. */
+@media (min-width: 901px) {
+  .founder-grid { height: auto; min-height: 0; align-items: stretch; }
+  .founder-media { height: auto; min-height: 0; align-self: stretch; }
+  .founder-media img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .founder-copy { height: auto; min-height: 0; padding-top: clamp(54px, 4vw, 76px); padding-bottom: 46px; }
+  .hero-copy h1 { font-size: clamp(52px, 5.9vw, 96px); }
+  .founder-copy h2 { font-size: clamp(42px, 3.9vw, 70px); }
+  .feature-deck .deck-copy h2 { font-size: clamp(48px, 4.9vw, 78px); }
+  .process-title { font-size: clamp(52px, 6vw, 96px) !important; }
+  .gallery-heading h2 { font-size: clamp(48px, 5.5vw, 88px); }
+  .mission-heading h2 { font-size: clamp(50px, 5.7vw, 94px); }
+  .contact-heading h2 { font-size: clamp(48px, 5.5vw, 90px); }
+  .directory-heading h2 { font-size: clamp(46px, 5.1vw, 84px); }
+}
+
