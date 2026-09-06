@@ -2,10 +2,7 @@ export function SiteHeader() {
   return (
     <header className="nav reference-nav">
       <div className="nav-left">
-        <a className="brand nav-cell logo-cell" href="/"><img className="site-logo site-logo-header" src="/gvm-logo.png" alt="Gandhi Vidya Mandir logo"/><span className="logo-wordmark">GVM</span></a>
-        <button className="nav-cell sound-cell" aria-label="Sound settings"><span/><span/><span/><span/><span/></button>
-        <a className="nav-cell lang-cell" href="/">EN</a>
-        <a className="nav-cell whatsapp-cell" href="https://wa.me/31653292939" aria-label="WhatsApp">◔</a>
+        <a className="brand nav-cell logo-cell" href="/"><img className="site-logo site-logo-header" src="/gvm-logo.png" alt="Gandhi Vidya Mandir logo"/><span className="logo-wordmark">Gandhi Vidhya Mandir</span></a>
       </div>
       <nav>
         <a href="/activities">ACTIVITIES</a>
