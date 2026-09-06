@@ -682,7 +682,6 @@ main > footer {
 @media(max-width:560px){.contact-offices,.contact-directory{padding:72px 0}.office-card{min-height:0;padding:30px 24px}.office-card>span{margin-bottom:54px}.directory-grid{grid-template-columns:1fr}.directory-grid a{min-height:118px}.directory-heading{margin-bottom:38px}}
 
 /* Mobile-first responsive corrections. */
-html,body{max-width:100%;overflow-x:hidden;}
 @media(max-width:700px){
   .shell{width:calc(100% - 32px);}
   .reference-nav{height:60px;left:8px;right:8px;top:8px;grid-template-columns:minmax(0,1fr) auto;}
