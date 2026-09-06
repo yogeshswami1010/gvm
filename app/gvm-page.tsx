@@ -1,8 +1,25 @@
 import { GvmPageData } from './gvm-content';
 import { SiteFooter, SiteHeader } from './site-chrome';
 
+const campusContacts = [
+  ['IASE Deemed University', '01564-223054'], ['Engineering Department', '01564-222248'], ['Management Department', '01564-222248'], ['Biotechnology Department', '01564-222204'], ['Physiotherapy Department', '01564-275536'], ['Veterinary Department', '01564-275542'], ['Mahila Mahavidyalaya', '01564-224658'], ['Guest House', '01564-223982'], ['Basic Teachers’ Training College', '01564-220056'], ['Ayurveda Vishwa Bharati', '01564-220176'], ['Panchkaram Department', '01564-225454'], ['Krishi Vigyan Kendra', '01564-221624'], ['Basic Higher Secondary School', '01564-220277'], ['SSRD Higher Secondary School', '01564-220209'], ['National Open School', '01564-225535'], ['Meera Niketan (Girls HS School)', '01564-220261'], ['Balbari School', '01564-220265'], ['Pratap Hostel', '01564-225323'], ['Durgawati Hostel', '01564-220420'], ['Bajaj Hostel', '01564-275748'], ['Nahta Hostel', '01564-224304'], ['Bal Grih, Subh-Seva Ashram', '01564-223641'], ['GVM Sah-Upbhogta Bhandar', '01564-220676'], ['Gaay Seva Sadan', '01564-220676'], ['Seth Budhmal Dugar College', '01564-220027'], ['Jawahar Navodya School', '01564-220010'], ['Aaapani Yojna', '01564-222056'], ['Panchayat Samiti', '01564-220050'], ['Sah. Dugadh Avsheetan Kendra', '01564-220192'], ['Jaldaay Department', '01564-220275'], ['Vidyut Mandal', '01564-220028'], ['GVM Post-office and Telegram', '01564-220257'], ['Oriental Bank of Commerce (OBC)', '01564-220947'],
+];
+
+function ContactHub() {
+  return <>
+    <section className="contact-offices"><div className="shell">
+      <div className="contact-heading"><span className="mono">CONNECT WITH US TODAY</span><h2>Every conversation<br/><em>starts here.</em></h2></div>
+      <div className="office-grid">
+        <article className="office-card office-central"><span className="mono">01 · CENTRAL OFFICE</span><h3>Gandhi Vidya Mandir</h3><a href="tel:+911564220025">01564-220025</a><a href="tel:+911564223642">01564-223642</a><a href="tel:+911564223054">01564-223054</a><p>Gandhi Vidya Mandir,<br/>Sardarshahr, Churu – 331401,<br/>Rajasthan, India.</p><a className="office-email" href="mailto:gvmcentraloffice@gmail.com">gvmcentraloffice@gmail.com ↗</a></article>
+        <article className="office-card"><span className="mono">02 · REGIONAL OFFICE (EAST)</span><h3>Howrah Office</h3><a href="tel:+913326413465">033-26413465</a><a href="tel:+91332641499">033-2641499</a><p>5P, Mahatma Gandhi Road,<br/>Howrah Maidan, Howrah – 711101,<br/>West Bengal, India.</p></article>
+      </div>
+    </div></section>
+    <section className="contact-directory"><div className="shell"><div className="directory-heading"><span className="mono">GVM CAMPUS</span><h2>Important contacts</h2><p>Reach the right academic, residential or service department directly.</p></div><div className="directory-grid">{campusContacts.map(([name, phone], index) => <a href={`tel:+91${phone.replace(/[^0-9]/g, '')}`} key={name}><span className="mono">{String(index + 1).padStart(2, '0')}</span><strong>{name}</strong><b>{phone}</b></a>)}</div></div></section>
+  </>;
+}
 export function GvmPage({ page }: { page: GvmPageData }) {
   const isAbout = page.kicker === 'ABOUT GVM';
+  const isContact = page.kicker === 'CONTACT';
 
   return (
     <main className="gvm-site inner-page">
@@ -24,7 +41,7 @@ export function GvmPage({ page }: { page: GvmPageData }) {
         <span className="mono">EST. 1950</span>
       </section>
 
-      <section className="gvm-page-body inner-page-body">
+      {isContact ? <ContactHub /> : <section className="gvm-page-body inner-page-body">
         <div className="shell">
           {page.sections.map((section, index) => (
             <article className="gvm-content-block inner-content-block" key={section.heading}>
@@ -37,7 +54,7 @@ export function GvmPage({ page }: { page: GvmPageData }) {
             </article>
           ))}
         </div>
-      </section>
+      </section>}
 
       {isAbout && <>
         <section className="mission-section">

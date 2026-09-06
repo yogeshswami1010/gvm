@@ -658,3 +658,25 @@ main > footer {
 .magnetic-card { background:#e6d9ca; }
 .inner-page .inner-content-block:nth-child(even) .block-copy { background:#f0dfd4; }
 .request-offer,.hero-bottom .pill { background:var(--sage); }
+
+/* Contact hub: official offices and campus directory. */
+.contact-offices{background:var(--cream);color:var(--ink);padding:clamp(90px,12vw,170px) 0;}
+.contact-heading{display:grid;grid-template-columns:1fr 1.35fr;gap:7vw;align-items:end;border-bottom:1px solid rgba(21,25,24,.26);padding-bottom:30px;}
+.contact-heading>span{color:var(--sage);border-top:1px solid currentColor;padding-top:12px;}
+.contact-heading h2{margin:0;font:400 clamp(58px,7.5vw,124px)/.83 Georgia,serif;letter-spacing:-.07em;}
+.office-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:clamp(42px,6vw,82px);}
+.office-card{min-height:460px;padding:clamp(30px,4.5vw,66px);display:flex;align-items:flex-start;flex-direction:column;border:1px solid rgba(21,25,24,.42);background:#efe7dc;}
+.office-central{background:var(--ink);color:var(--cream);}
+.office-card>span{margin-bottom:clamp(48px,8vw,92px);color:var(--sage);}
+.office-card h3{margin:0 0 26px;font:400 clamp(38px,4vw,66px)/.9 Georgia,serif;letter-spacing:-.055em;}
+.office-card>a:not(.office-email){font:400 clamp(21px,2.2vw,34px)/1.12 Georgia,serif;letter-spacing:-.035em;}
+.office-card p{margin:34px 0;font-size:17px;line-height:1.6;}
+.office-card .office-email{margin-top:auto;border-bottom:1px solid currentColor;padding-bottom:10px;font:600 13px var(--font-geist-mono),monospace;letter-spacing:.04em;color:var(--sage);}
+.contact-directory{padding:clamp(90px,12vw,170px) 0;background:#1b211e;color:var(--cream);}
+.directory-heading{display:grid;grid-template-columns:.7fr 1.3fr 1fr;gap:5vw;align-items:end;margin-bottom:65px;}
+.directory-heading>span{color:var(--sage);border-top:1px solid rgba(233,224,212,.42);padding-top:12px;}
+.directory-heading h2{margin:0;font:400 clamp(54px,6.7vw,108px)/.84 Georgia,serif;letter-spacing:-.07em;}.directory-heading p{margin:0 0 6px;font-size:17px;line-height:1.55;}
+.directory-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(233,224,212,.3);border-left:1px solid rgba(233,224,212,.3);}
+.directory-grid a{min-height:148px;padding:20px;display:grid;grid-template-columns:32px 1fr;grid-template-rows:1fr auto;gap:12px;border-right:1px solid rgba(233,224,212,.3);border-bottom:1px solid rgba(233,224,212,.3);transition:background .25s,color .25s;}.directory-grid a:hover{background:var(--sage);color:var(--ink);}.directory-grid span{color:var(--sage);font-size:11px;}.directory-grid a:hover span{color:var(--ink);}.directory-grid strong{font:400 clamp(20px,1.9vw,29px)/.95 Georgia,serif;letter-spacing:-.04em;}.directory-grid b{grid-column:2;font:500 14px var(--font-geist-mono),monospace;color:rgba(233,224,212,.78);}.directory-grid a:hover b{color:var(--ink);}
+@media(max-width:900px){.contact-heading,.directory-heading{grid-template-columns:1fr;gap:28px}.office-grid{grid-template-columns:1fr}.directory-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.contact-offices,.contact-directory{padding:72px 0}.office-card{min-height:0;padding:30px 24px}.office-card>span{margin-bottom:54px}.directory-grid{grid-template-columns:1fr}.directory-grid a{min-height:118px}.directory-heading{margin-bottom:38px}}
