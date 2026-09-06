@@ -45,7 +45,7 @@ export default function Home() {
   <div className="eyebrow mono">OUR FOUNDER · GVM</div>
   <div className="founder-grid">
     <figure className="founder-media">
-      <img src="/gh.avif" alt="Swami Shri Ram Sharanji" />
+      <img src="/swami-ram-sharanji.jpg" alt="Swami Shri Ram Sharanji" />
       <figcaption className="mono">SWAMI SHRI RAM SHARANJI · 1922–2022</figcaption>
     </figure>
     <div className="founder-copy">
