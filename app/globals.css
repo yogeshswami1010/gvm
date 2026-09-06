@@ -680,3 +680,27 @@ main > footer {
 .directory-grid a{min-height:148px;padding:20px;display:grid;grid-template-columns:32px 1fr;grid-template-rows:1fr auto;gap:12px;border-right:1px solid rgba(233,224,212,.3);border-bottom:1px solid rgba(233,224,212,.3);transition:background .25s,color .25s;}.directory-grid a:hover{background:var(--sage);color:var(--ink);}.directory-grid span{color:var(--sage);font-size:11px;}.directory-grid a:hover span{color:var(--ink);}.directory-grid strong{font:400 clamp(20px,1.9vw,29px)/.95 Georgia,serif;letter-spacing:-.04em;}.directory-grid b{grid-column:2;font:500 14px var(--font-geist-mono),monospace;color:rgba(233,224,212,.78);}.directory-grid a:hover b{color:var(--ink);}
 @media(max-width:900px){.contact-heading,.directory-heading{grid-template-columns:1fr;gap:28px}.office-grid{grid-template-columns:1fr}.directory-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.contact-offices,.contact-directory{padding:72px 0}.office-card{min-height:0;padding:30px 24px}.office-card>span{margin-bottom:54px}.directory-grid{grid-template-columns:1fr}.directory-grid a{min-height:118px}.directory-heading{margin-bottom:38px}}
+
+/* Mobile-first responsive corrections. */
+html,body{max-width:100%;overflow-x:hidden;}
+@media(max-width:700px){
+  .shell{width:calc(100% - 32px);}
+  .reference-nav{height:60px;left:8px;right:8px;top:8px;grid-template-columns:minmax(0,1fr) auto;}
+  .reference-nav.is-small{left:8px;right:8px;top:8px;}
+  .reference-nav .logo-cell{min-width:0;min-height:58px;flex:1;padding:0 12px;overflow:hidden;}
+  .reference-nav .logo-wordmark{font-size:clamp(13px,4.2vw,17px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .request-offer{height:44px;min-width:118px;margin-right:7px;padding:0 8px 0 12px;font-size:10px;}
+  .request-offer b{width:28px;height:28px;font-size:25px;}
+  .hero{margin:8px;min-height:calc(100svh - 16px);}
+  .hero-copy{width:calc(100% - 36px);min-height:calc(100svh - 16px);padding:92px 0 28px;}
+  .hero-copy h1{font-size:clamp(46px,14vw,72px);line-height:.9;}
+  .hero-bottom{margin-top:22px;}.hero-bottom p{font-size:16px;line-height:1.45;}.hero-bottom .pill{min-width:0;width:100%;}
+  .centenary{margin:8px!important;}.centenary-slider{min-height:340px;}.centenary-story{padding:40px 22px;}
+  .feature-deck{height:280vh;}.feature-deck .deck-grid{height:100svh;}.feature-deck .deck-copy{left:16px;right:16px;top:8vh;}.feature-deck .deck-copy h2{font-size:clamp(45px,13vw,65px);}.deck-stage{height:54vh;margin-top:21vh;}.feature-deck .deck-card{width:84vw;padding:20px;}.feature-deck .deck-card h3{font-size:clamp(38px,10vw,56px);}
+  .gvm-overview{padding:70px 0;}.overview-grid article{min-height:0;padding:24px;}.overview-grid h3{margin-top:44px;}
+  .process .steps{height:300vh;}.process .step,.process .step:nth-child(2),.process .step:nth-child(3){top:8vh;min-height:70vh;}.step-copy{padding:25px;}.step-copy h3{font-size:clamp(43px,12vw,62px);}.step-visual{min-height:270px;margin:12px;}
+  .gallery-heading{display:block;}.gallery-heading .gallery-side{margin-top:28px;}.gallery-item,.gallery-item.gallery-large{flex-basis:82%;height:220px;}
+  .inner-page .inner-hero{margin:8px;min-height:calc(100svh - 16px);}.inner-page .inner-hero-copy{width:calc(100% - 36px);margin-left:18px;margin-bottom:42px;}.inner-page .inner-hero h1{font-size:clamp(46px,14vw,72px);}.inner-page .inner-hero-index{display:none;}.inner-rail{padding:32px 0;}
+  .contact-heading h2,.directory-heading h2{font-size:clamp(48px,14vw,68px);}.office-card h3{font-size:clamp(36px,11vw,52px);}.office-card>a:not(.office-email){font-size:24px;}.directory-grid a{padding:18px;}
+  .site-footer .footer-main{grid-template-columns:1fr;gap:34px;padding-block:54px;}.site-footer .footer-identity,.site-footer .footer-contact{grid-column:auto;}.site-footer .footer-contact{border-left:0;padding-left:0;border-top:1px solid rgba(233,224,212,.22);padding-top:28px;}.site-footer .footer-brand,.site-logo-footer{width:92px;height:92px;}.site-footer .footer-column>span{font-size:17px;}.site-footer .footer-column a{font-size:18px;}
+}
