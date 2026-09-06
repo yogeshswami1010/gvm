@@ -733,3 +733,10 @@ main > footer {
   .directory-heading h2 { font-size: clamp(50px, 5.7vw, 92px); }
 }
 
+
+/* Keep the GVM values card stack fully visible in the upper-right desktop stage. */
+@media (min-width: 901px) {
+  .feature-deck .deck-stage { transform: translate(12px, -54px); }
+  .feature-deck .deck-card { width: min(34vw, 460px); }
+}
+
