@@ -643,3 +643,18 @@ main > footer {
 @media(max-width:580px){ .logo-cell{padding-left:10px;gap:9px}.site-logo-header{width:42px;height:42px;flex-basis:42px}.logo-wordmark{font-size:14px} }
 .reference-nav .logo-cell { display:flex; align-items:center; justify-content:flex-start; }
 .reference-nav .logo-cell { min-width:300px; gap:0; }
+
+/* Saffron is the GVM accent—not a large-area background. */
+:root { --sage:#d84a10; }
+.feature-deck { background:#ded6ca; }
+.feature-deck .deck-card,.feature-deck .card-one { background:#efe7dc; }
+.feature-deck .card-two { background:#dfd2c0; }
+.feature-deck .card-three { background:#c9b7a1; }
+.step.sage { background:#d7c4ad; }
+.step.clay { background:#c6ad96; }
+.story-art { background:#27302b; }
+.closing,.gvm-home-support,.gvm-page-cta { background:#e9e0d4; }
+.gvm-stats,.gvm-service { background:#ded6ca; }
+.magnetic-card { background:#e6d9ca; }
+.inner-page .inner-content-block:nth-child(even) .block-copy { background:#f0dfd4; }
+.request-offer,.hero-bottom .pill { background:var(--sage); }
