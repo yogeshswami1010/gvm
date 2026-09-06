@@ -703,3 +703,10 @@ main > footer {
   .contact-heading h2,.directory-heading h2{font-size:clamp(48px,14vw,68px);}.office-card h3{font-size:clamp(36px,11vw,52px);}.office-card>a:not(.office-email){font-size:24px;}.directory-grid a{padding:18px;}
   .site-footer .footer-main{grid-template-columns:1fr;gap:34px;padding-block:54px;}.site-footer .footer-identity,.site-footer .footer-contact{grid-column:auto;}.site-footer .footer-contact{border-left:0;padding-left:0;border-top:1px solid rgba(233,224,212,.22);padding-top:28px;}.site-footer .footer-brand,.site-logo-footer{width:92px;height:92px;}.site-footer .footer-column>span{font-size:17px;}.site-footer .footer-column a{font-size:18px;}
 }
+
+/* Keep the founder portrait exactly aligned to the full text-column height. */
+@media (min-width: 901px) {
+  .founder-grid { align-items: stretch; }
+  .founder-media { min-height: 0; height: auto; align-self: stretch; }
+}
+
