@@ -45,8 +45,8 @@ export default function Home() {
   <div className="eyebrow mono">OUR FOUNDER · GVM</div>
   <div className="founder-grid">
     <figure className="founder-media">
-      <img src="/gvm-campus-aerial.jpg" alt="Gandhi Vidya Mandir aerial campus" />
-      <figcaption className="mono">GANDHI VIDYA MANDIR · SARDARSHAHR</figcaption>
+      <img src="/gh.avif" alt="Swami Shri Ram Sharanji" />
+      <figcaption className="mono">SWAMI SHRI RAM SHARANJI · 1922–2022</figcaption>
     </figure>
     <div className="founder-copy">
       <span className="mono">A LIFE OF SERVICE</span>
