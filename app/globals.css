@@ -710,3 +710,11 @@ main > footer {
   .founder-media { min-height: 0; height: auto; align-self: stretch; }
 }
 
+
+/* Desktop founder panel: image and copy share one deliberate, compact height. */
+@media (min-width: 901px) {
+  .founder-grid { height: min(44vw, 800px); min-height: 0; }
+  .founder-media { height: 100%; }
+  .founder-copy { height: 100%; box-sizing: border-box; padding-top: clamp(64px, 5vw, 90px); padding-bottom: 44px; }
+}
+
