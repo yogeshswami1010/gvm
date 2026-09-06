@@ -643,4 +643,3 @@ main > footer {
 @media(max-width:580px){ .logo-cell{padding-left:10px;gap:9px}.site-logo-header{width:42px;height:42px;flex-basis:42px}.logo-wordmark{font-size:14px} }
 .reference-nav .logo-cell { display:flex; align-items:center; justify-content:flex-start; }
 .reference-nav .logo-cell { min-width:300px; gap:0; }
-.reference-nav .logo-wordmark { background:linear-gradient(105deg,#ffb28d 0%,#ff5a12 42%,#c92800 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; text-shadow:none; }
