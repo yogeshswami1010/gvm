@@ -1,16 +1,12 @@
-import { spawn } from 'node:child_process';
-import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import { startProdServer } from './node_modules/vinext/dist/server/prod-server.js';
 
-// Hostinger requires a JavaScript entry file. Delegate to Vinext's production
-// server so the app runs with the same command used locally: `vinext start`.
-const vinextCli = fileURLToPath(new URL('./node_modules/vinext/dist/cli.js', import.meta.url));
-const child = spawn(process.execPath, [vinextCli, 'start'], {
-  env: process.env,
-  stdio: 'inherit',
+// Hostinger requires one JavaScript entry file. Start Vinext in this process
+// instead of spawning a child, which prevents stale child servers on restart.
+const port = Number.parseInt(process.env.PORT ?? '3000', 10);
+
+await startProdServer({
+  host: '0.0.0.0',
+  outDir: path.resolve(process.cwd(), 'dist'),
+  port,
 });
-
-for (const signal of ['SIGINT', 'SIGTERM']) {
-  process.on(signal, () => child.kill(signal));
-}
-
-child.on('exit', (code) => process.exit(code ?? 0));
