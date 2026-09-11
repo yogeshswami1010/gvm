@@ -20,13 +20,18 @@ function ContactHub() {
 export function GvmPage({ page }: { page: GvmPageData }) {
   const isAbout = page.kicker === 'ABOUT GVM';
   const isContact = page.kicker === 'CONTACT';
+  const isGaushala = page.kicker === 'GAU SHALA';
 
   return (
     <main className="gvm-site inner-page">
       <SiteHeader />
 
       <section className="gvm-page-hero inner-hero">
-        <img src={page.image} alt="Gandhi Vidya Mandir campus activity" />
+        {isGaushala ? (
+          <video autoPlay loop muted playsInline poster={page.image} aria-label="Gau Shala cattle care">
+            <source src="/gaushala-hero.mp4" type="video/mp4" />
+          </video>
+        ) : <img src={page.image} alt="Gandhi Vidya Mandir campus activity" />}
         <div className="inner-hero-copy">
           <span className="mono">{page.kicker}</span>
           <h1>{page.title}</h1>
