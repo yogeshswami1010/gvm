@@ -780,3 +780,11 @@ main > footer {
   .hero,.hero-copy{min-height:50svh;}
   .hero-copy{padding-top:82px;padding-bottom:22px;}
 }
+
+@media(max-width:700px){
+  .reference-nav{left:14px;right:14px;}
+  .reference-nav.is-small{left:14px;right:14px;}
+  .mobile-nav summary{width:52px;padding-inline:8px;}
+  .mobile-nav-panel{padding:10px 14px;right:-2px;}
+  .hero,.hero-copy{min-height:75svh;}
+}
