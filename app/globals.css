@@ -788,3 +788,24 @@ main > footer {
   .mobile-nav-panel{padding:10px 14px;right:-2px;}
   .hero,.hero-copy{min-height:75svh;}
 }
+
+@media(max-width:700px){
+  .mobile-nav summary{
+    width:93px;
+    height:44px;
+    padding-inline:8px;
+    margin-left:15px;
+    margin-right:15px;
+    color:var(--cream);
+    font:600 16px var(--font-geist-mono),monospace;
+    letter-spacing:.05em;
+    border:1px solid #e9e0d447;
+    border-radius:4px;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    list-style:none;
+    display:flex;
+    cursor:pointer;
+  }
+}
