@@ -11,6 +11,12 @@ export function SiteHeader() {
         <a href="/bal-griha">BAL GRIHA</a>
         <a href="/contact">CONTACT</a>
       </nav>
+      <details className="mobile-nav">
+        <summary aria-label="Open navigation menu"><span>MENU</span><i aria-hidden="true"></i></summary>
+        <div className="mobile-nav-panel">
+          <a href="/activities">Activities</a><a href="/about">About GVM</a><a href="/gaushala">Gau Shala</a><a href="/bal-griha">Bal Griha</a><a href="/contact">Contact</a><a href="/support-us">Support GVM</a>
+        </div>
+      </details>
       <a className="request-offer" href="/support-us"><span>SUPPORT GVM</span><b>›</b></a>
     </header>
   );
