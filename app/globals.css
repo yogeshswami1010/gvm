@@ -772,3 +772,11 @@ main > footer {
   .mobile-nav-panel a{display:block;padding:15px 14px;border-bottom:1px solid rgba(233,224,212,.14);font:600 13px var(--font-geist-mono),monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--cream);}.mobile-nav-panel a:last-child{border-bottom:0;background:var(--sage);color:var(--ink);margin-top:4px;border-radius:3px;}
 }
 @media(max-width:400px){.reference-nav .request-offer{min-width:0;width:44px;padding:0;justify-content:center;}.reference-nav .request-offer>span{display:none;}.reference-nav .request-offer b{background:transparent;color:var(--ink);}}
+
+/* Compact mobile header and homepage hero. */
+@media(max-width:700px){
+  .reference-nav{grid-template-columns:minmax(0,1fr) auto;}
+  .reference-nav .request-offer{display:none;}
+  .hero,.hero-copy{min-height:50svh;}
+  .hero-copy{padding-top:82px;padding-bottom:22px;}
+}
